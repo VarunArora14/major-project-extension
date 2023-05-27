@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 400px;
+  height: 100vh;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #dce0e8;
+  border: 1px solid #333;
+  color: #4c4f69;
+  font-family: "Inter", sans-serif;
+}
+
+.logo__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.raksh-logo {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: bold;
+  color: #4c4f69;
+}
+
+.description {
+  font-size: 36px;
+  font-weight: 500;
+
+  margin-top: 1rem;
+}
+
+.phishing-image {
+  height: 6rem;
+  width: 6rem;
+}
+.text-btn-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.url-text {
+  width: 240px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.scan-url-btn {
+  width: 240px;
+  
+  border-radius: 8px;
+  background-color: #acb0be;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #333;
+}
+
+.response-container {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
