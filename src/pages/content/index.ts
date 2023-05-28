@@ -22,17 +22,18 @@ const domElementsMutation = (element: HTMLElement) => {
     const element = document.createElement("button");
     element.id = `${link.href}__check__btn`;
     element.classList.add("tooltiptext");
-    element.textContent = "Check";
+    element.textContent = "Detect";
 
     // styles
     element.style.color = "white";
-    element.style.background = "black";
-    element.style.border = "1px solid maroon";
+    element.style.background = "#e39220";
+    element.style.border = "0";
     element.style.display = "inline-block";
 
     const checkLink = async () => {
-      element.textContent = "Checking...";
+      element.textContent = "Detecting...";
       const response = await fetch(
+        // "https://raksh-ml-model-2xuov.ondigitalocean.app/api",
         "http://localhost:5000/api",
         {
           method: "POST",
@@ -47,8 +48,17 @@ const domElementsMutation = (element: HTMLElement) => {
 
       const data = await response.json();
       element.textContent =
-        data.prediction === "safe" ? "safe ✅" : "unsafe ❗️";
+        data.prediction === "safe" ? "safe" : "unsafe";
+      
 
+      if (element.textContent === "safe"){
+        element.style.backgroundColor = "#05a67e";
+      }
+
+      else if(element.textContent === "unsafe")
+      {
+        element.style.backgroundColor = "#bf0b0b";
+      }
       if (data.prediction === "unsafe") {
         link.setAttribute("raksh__status", "unsafe");
       }
@@ -117,11 +127,11 @@ const domElementsMutation = (element: HTMLElement) => {
               <img src="https://cdn.tealfeed.com/articles/content-images/642338ef71e7c94dd352fdec/1680029987640.png" />
             </div>
 
-            <h1 class="logo__heading">Phishing Detector</h1>
+            <h1 class="logo__heading">Raksh</h1>
           </div>
 
           <h1>
-            This link is unsafe !!!
+            This link has been marked as unsafe by Raksh!
           </h1>
 
           <div class="btn__container">
