@@ -68,6 +68,7 @@ const domElementsMutation = (element: HTMLElement) => {
     });
 
     link.addEventListener("click", (e) => {
+      return;
       if (link.getAttribute("raksh__status") !== "unsafe") return;
 
       e.preventDefault();

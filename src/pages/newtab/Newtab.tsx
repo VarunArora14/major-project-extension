@@ -68,16 +68,16 @@ const Newtab = () => {
         }
       }}
     >
-      <div className="logo__wrapper">
         <img className="phish-logo" src="/phishing.png" alt="Phishing icon" />
+      <div className="logo__wrapper">
+        <br />
         <h1 className="title">Phishing Detector</h1>
       </div>
 
       <p className="description">
-        Secure yourself against <span style={{
-          color: "maroon"
-        }}>phishing</span> attacks!
+        Enter text in Search Bar and hover over links to check them
       </p>
+      <p className="made-by"> Made By Varun, Yuvraj and Aakash</p>
     </form>
   );
 };
