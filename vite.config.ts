@@ -12,7 +12,8 @@ const assetsDir = resolve(root, "assets");
 const outDir = resolve(__dirname, "dist");
 const publicDir = resolve(__dirname, "public");
 
-const isDev = process.env.__DEV__ === "true";
+const __DEV__ = "true";
+const isDev = __DEV__ === "true";
 const isProduction = !isDev;
 
 // ENABLE HMR IN BACKGROUND SCRIPT

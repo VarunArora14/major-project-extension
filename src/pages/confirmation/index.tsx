@@ -32,7 +32,7 @@ const Confirmation = () => (
         }}
       >
         <img
-          src="/raksh.png"
+          src="/phishing.png"
           style={{
             width: "100%",
             height: "100%",
@@ -45,7 +45,7 @@ const Confirmation = () => (
           fontSize: "64px",
         }}
       >
-        Raksh
+        Phishing Detector
       </h1>
     </div>
 
@@ -109,3 +109,5 @@ function init() {
 }
 
 init();
+
+// TODO: popup model CHECK FIRST

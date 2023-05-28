@@ -24,7 +24,7 @@ const manifest: chrome.runtime.ManifestV2 = {
     newtab: "src/pages/newtab/index.html",
   },
   icons: {
-    "128": "raksh.png",
+    "128": "phishing.png",
   },
   content_scripts: [
     {

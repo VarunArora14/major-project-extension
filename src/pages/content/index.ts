@@ -1,5 +1,6 @@
 import "@pages/content/style.scss";
 
+// TODO: interaction with page
 // console.log("content loaded");
 
 const config = {
@@ -32,7 +33,6 @@ const domElementsMutation = (element: HTMLElement) => {
     const checkLink = async () => {
       element.textContent = "Checking...";
       const response = await fetch(
-        // "https://raksh-ml-model-2xuov.ondigitalocean.app/api",
         "http://localhost:5000/api",
         {
           method: "POST",
@@ -116,11 +116,11 @@ const domElementsMutation = (element: HTMLElement) => {
               <img src="https://cdn.tealfeed.com/articles/content-images/642338ef71e7c94dd352fdec/1680029987640.png" />
             </div>
 
-            <h1 class="logo__heading">Raksh</h1>
+            <h1 class="logo__heading">Phishing Detector</h1>
           </div>
 
           <h1>
-            This link has been marked as unsafe by Raksh!
+            This link is unsafe !!!
           </h1>
 
           <div class="btn__container">

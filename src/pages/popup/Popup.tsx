@@ -37,7 +37,6 @@ const Popup = () => {
     setIsLoading(true);
     setResponse(undefined);
     const response = await fetch(
-      // "https://raksh-ml-model-2xuov.ondigitalocean.app/api",
       "http://localhost:5000/api",
       {
         method: "POST",
@@ -69,8 +68,8 @@ const Popup = () => {
       }}
     >
       <div className="logo__wrapper">
-        <img className="raksh-logo" src="/raksh.png" alt="Phishing icon" />
-        <h1 className="title">Raksh</h1>
+        <img className="phish-logo" src="/phishing.png" alt="Phishing icon" />
+        <h1 className="title">Phishing Detector</h1>
       </div>
 
       <p className="description">Enter website link to get started!</p>
