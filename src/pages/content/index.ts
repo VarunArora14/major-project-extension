@@ -33,7 +33,6 @@ const domElementsMutation = (element: HTMLElement) => {
     const checkLink = async () => {
       element.textContent = "Detecting...";
       const response = await fetch(
-        // "https://raksh-ml-model-2xuov.ondigitalocean.app/api",
         "http://localhost:5000/api",
         {
           method: "POST",
@@ -60,7 +59,7 @@ const domElementsMutation = (element: HTMLElement) => {
         element.style.backgroundColor = "#bf0b0b";
       }
       if (data.prediction === "unsafe") {
-        link.setAttribute("raksh__status", "unsafe");
+        link.setAttribute("phish__status", "unsafe");
       }
     };
 
@@ -79,7 +78,7 @@ const domElementsMutation = (element: HTMLElement) => {
 
     link.addEventListener("click", (e) => {
       return;
-      if (link.getAttribute("raksh__status") !== "unsafe") return;
+      if (link.getAttribute("phish__status") !== "unsafe") return;
 
       e.preventDefault();
 
@@ -127,11 +126,11 @@ const domElementsMutation = (element: HTMLElement) => {
               <img src="https://cdn.tealfeed.com/articles/content-images/642338ef71e7c94dd352fdec/1680029987640.png" />
             </div>
 
-            <h1 class="logo__heading">Raksh</h1>
+            <h1 class="logo__heading">Phishing Detector</h1>
           </div>
 
           <h1>
-            This link has been marked as unsafe by Raksh!
+            This link has been marked as unsafe by Phishing Detector!
           </h1>
 
           <div class="btn__container">
